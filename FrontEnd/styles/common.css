@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.light-bg {
+    color: #2E363E;
+}
+
+.dark-bg {
+    color: #FFF;
+}
+
+.light-bg, .dark-bg {
+    font-family: 'Montserrat';
+}
+
+#header {
+    height: 165vh;
+}
+
+#header, #footer {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+
+.randomPosition_Image-section {
+    position: relative;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.randomPosition_Image {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    z-index: 0;
+}
+
