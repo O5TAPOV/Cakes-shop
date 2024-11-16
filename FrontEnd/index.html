@@ -18,7 +18,7 @@
                         <img src="img/header/location_icon.svg" style="height: 34px;">
                         <span class="location-span">м. Київ,<br> вул. Хрещатик 22</span>
                     </div> 
-                    <div class="info">
+                    <div class="nav-info">
                         <img src="img/header/phone_icon.svg" style="height: 34px;">
                         <span class="phoneNumber-span">+380 (XX) XXX XXX</span><br>
                         <span class="workSchedule-span">Кожен день з 9:00 до 21:00</span>
@@ -26,9 +26,21 @@
                 </div>
             </div>
         </nav>
+        <div class="info dark-bg">
+            <span class="overtitle light-bg">
+                Найсмачніші
+            </span>
+            <h2>Тістечка та капкейки від 50 грн/шт. з доставкою по Києву</h2>
+            <span class="subtext">Приготуємо за 3 години в день замовлення.</span><br>
+            <span class="subtext">Доставка на авто в холодильнику.</span>
+            <div class="go-to-catalog">
+                <button onclick="scrollToSection('section1_catalog')">Перейти в каталог</button>
+                <span class="speciesCount">9 різних видів на вибір</span>
+            </div>
+        </div>
     </header>
     <main>
-        <section id="section1_orderCakes" class="randomPosition_Image-section"></section>
+        <section id="section1_catalog" class="randomPosition_Image-section"></section>
         <section id="section2_phone" class="randomPosition_Image-section"></section>
         <section id="section3_employee" class="randomPosition_Image-section"></section>
         <section id="section4_reviews" class="randomPosition_Image-section"></section>
@@ -37,5 +49,7 @@
     <footer id="footer"></footer>
 
     <script src="js/randomImagePosition.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/button-waves.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@ function createRandomImages(sectionID, raspberryConfig, leavesConfig)
     const sectionHeight = section.offsetHeight;
     const fragment = document.createDocumentFragment();
 
-    function createImage(config, src, x, y)
+    function createImage(config, src, x, y, offsetType = 'left', offsetValue = 0)
     {
         const img = document.createElement('img');
         img.src = src;
@@ -18,8 +18,13 @@ function createRandomImages(sectionID, raspberryConfig, leavesConfig)
         const blur = Math.random() * (config.maxBlur - config.minBlur) + config.minBlur;
         const rotate = Math.random() * (config.maxRotate - config.minRotate) + config.minRotate;
 
-        const posX = x ?? Math.random() * (sectionWidth - size);
+        let posX = x ?? Math.random() * (sectionWidth - size);
         const posY = y ?? Math.random() * (sectionHeight - size);
+
+        if(offsetType == 'right') 
+            {posX = sectionWidth - size - offsetValue;}
+        else if(offsetType == 'left') 
+            {posX = offsetValue;}
 
         img.style.cssText = `
             position: absolute;
@@ -27,15 +32,15 @@ function createRandomImages(sectionID, raspberryConfig, leavesConfig)
             height: ${size}px;
             filter: blur(${blur}px);
             transform: rotate(${rotate}deg);
-            left: ${Math.max(-50, Math.min(posX, sectionWidth - size))}px;
-            top:${Math.max(-50, Math.min(posY, sectionHeight - size))}px;
+            left: ${posX}px;
+            top:${Math.max(-200, Math.min(posY, sectionHeight - size))}px;
         `;
 
         fragment.appendChild(img);
     }
 
-    raspberryConfig.images.forEach(([x,y]) => createImage(raspberryConfig, './img/common/raspberry.svg', x, y));
-    leavesConfig.images.forEach(([x,y]) => createImage(leavesConfig, './img/common/leaf.svg', x, y));
+    raspberryConfig.images.forEach(([x, y, offsetType, offsetValue]) => createImage(raspberryConfig, './img/common/raspberry.svg', x, y, offsetType, offsetValue));
+    leavesConfig.images.forEach(([x, y, offsetType, offsetValue]) => createImage(leavesConfig, './img/common/leaf.svg', x, y, offsetType, offsetValue));
 
     section.appendChild(fragment);
 }
@@ -44,11 +49,15 @@ document.addEventListener("DOMContentLoaded", () =>
 {
     createRandomImages('header', 
     { 
-        minSize: 150, maxSize: 240, minBlur: 0, maxBlur: 2, minRotate: 0, maxRotate: 360,
-        images: [[-40, -5], [1300, 80], [1300, 700]]
+        minSize: 120, maxSize: 220, minBlur: 0, maxBlur: 2, minRotate: 0, maxRotate: 360,
+        images: [
+            [null, -5, 'left', 180], 
+            [null, 80, 'right', -50], 
+            [null, 680, 'right', -40]
+        ]
     }, 
     { 
         minSize: 200, maxSize: 220, minBlur: 0, maxBlur: 5, minRotate: 270, maxRotate: 280,
-        images: [[20, 1060]]
+        images: [[20, 1600]]
     });
 })
