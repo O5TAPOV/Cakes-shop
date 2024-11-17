@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="card-title">${title}</div>
                 <div class="card-description">${description}</div>
                 <div class="card-price">${price}</div>
-                <button class="card-button">Замовити</button>
+                <button class="card-button" onclick="scrollToSection('footer')">Замовити</button>
             </div>
         </div>
     `;
