@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 a {
@@ -74,7 +75,7 @@ nav {
     margin-left: 4em;
 }
 
-.info .overtitle {
+.overtitle {
     padding: 10px 18px;
     background: #F2F6FA;
     border-radius: 5px;
@@ -125,6 +126,8 @@ section h3 {
 
 #section2_phone {
     height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
 }
 
 .section2_up_img {
