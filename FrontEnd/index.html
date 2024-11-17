@@ -35,7 +35,7 @@
             <span class="subtext">Приготуємо за 3 години в день замовлення.</span><br>
             <span class="subtext">Доставка на авто в холодильнику.</span>
             <div class="go-to-catalog">
-                <button onclick="scrollToSection('section1_catalog')">Перейти в каталог</button>
+                <button class="big-button" onclick="scrollToSection('section1_catalog')">Перейти в каталог</button>
                 <span class="speciesCount">9 різних видів на вибір</span>
             </div>
         </div>
@@ -46,9 +46,17 @@
             <div id="catalog" class="cards-section"></div>
         </section>
         <section id="section2_phone" class="randomPosition_Image-section dark-bg-section">
-            <span class="CloudImg downCloud_img section2_up_img"></span>
-            
-            
+            <span class="CloudImg upCloud_img section2_up_img"></span>
+            <div class="phone-and-text">
+                <img src="img/section2_phone/phone.png" class="phone-img">
+                <div class="phone-text">
+                    <span class="overtitle light-bg">Не знайшли те, що потрібно?</span>
+                    <h2>Приготуємо замовлення будь-якої складності по фото або ескізу</h2>
+                    <span class="subtext">Завантажте фотографію або ескіз капкейків і ми розрахуємо вартість за 30 хвилин</span><br>
+                    <button class="big-button">Завантажити фото</button>
+                </div>
+            </div>
+            <span class="CloudImg downCloud_img section2_down_img"></span>
         </section>
         <section id="section3_employee" class="randomPosition_Image-section light-bg-section">
             
@@ -57,7 +65,6 @@
         <section id="section5_gallery" class="randomPosition_Image-section light-bg-section"></section>
     </main>
     <footer id="footer" class="dark-bg-section"></footer>
-
     <script src="js/randomImagePosition.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/cardsInCatalog.js"></script>

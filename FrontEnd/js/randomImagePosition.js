@@ -72,5 +72,18 @@ document.addEventListener("DOMContentLoaded", () =>
             [null, 560, 'right', 40],
             [null, 1100, 'left', 40]
         ]
-    })
+    });
+    createRandomImages('section2_phone', {
+        minSize: 160, maxSize: 180, minBlur: 0, maxBlur: 2, minRotate: 0, maxRotate: 360,
+        images: [
+            [null, 320, 'right', 200]
+        ]
+    },
+    {
+        minSize: 160, maxSize: 180, minBlur: 0, maxBlur: 5, minRotate: 280, maxRotate: 290,
+        images: [
+            [null, 340, 'left', 40],
+        ]
+    }
+    )
 });

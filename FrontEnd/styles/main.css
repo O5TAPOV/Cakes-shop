@@ -1,4 +1,4 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -9,8 +9,8 @@ a {
 }
 
 header {
-    width: 100vw;
-    height: 165vh;
+    padding-bottom: 1px;
+    width: 100%;
     background-image: url("../img/header/header_bg.svg");
     background-size: cover;
     background-position: center;
@@ -85,7 +85,7 @@ nav {
     text-transform: uppercase;
 }
 
-.info h2 {
+h2 {
     font-family: 'Montserrat';
     font-size: 48px;
 }
@@ -100,7 +100,7 @@ nav {
     grid-template-columns: auto 1fr;
 }
 
-.go-to-catalog button {
+.big-button {
     padding: 30px 50px;
 }
 
@@ -112,7 +112,9 @@ nav {
 }
 
 section {
-    width: 100vw;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 section h3 {
@@ -125,15 +127,42 @@ section h3 {
 }
 
 #section2_phone {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr, 1fr;
+    margin-top: -0.2em;
+    padding-top: 28em;
+    height: 210vh;
 }
 
 .section2_up_img {
     background-image: url("../img/section2_phone/phone_up_cloud.svg");
 }
 
+.phone-and-text {
+    display: flex;
+}
+
+.phone-img {
+    position: relative;
+    width: 60%;
+    margin-top: -6em;
+    margin-left: -16em;
+}
+
+.phone-text {
+    margin-left: 4em;
+}
+
+.phone-text .overtitle {
+    padding: 16px;
+}
+
+.phone-text button {
+    position: relative;
+    z-index: 2;
+    margin-top: 2em;
+}
+
 .section2_down_img {
+    bottom: -130vh;
     background-image: url("../img/section2_phone/phone_down_cloud.svg");
+    z-index: 1;
 }
