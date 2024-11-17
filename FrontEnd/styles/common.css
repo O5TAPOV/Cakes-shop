@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    line-height: 143%;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
 .light-bg {
+    color: #2E363E;
+}
+
+.light-bg-section {
     color: #2E363E;
 }
 
@@ -8,8 +22,9 @@
     color: #FFF;
 }
 
-* {
-    font-family: 'Montserrat';
+.dark-bg-section {
+    color: #FFF;
+    background-color: #081130;
 }
 
 #header {
@@ -23,13 +38,14 @@
 .randomPosition_Image-section {
     position: relative;
     width: 100%;
+    z-index: 0;
 }
 
 .randomPosition_Image {
     position: absolute;
     height: 100px;
     width: 100px;
-    z-index: 0;
+    z-index: 1;
 }
 
 button {
@@ -47,4 +63,13 @@ button:hover {
     background: #DB3636;
     color: #ffffff;
     transition: 0.3s;   
+}
+
+.CloudImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: -0.2em;
 }

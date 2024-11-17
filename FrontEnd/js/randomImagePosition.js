@@ -33,7 +33,7 @@ function createRandomImages(sectionID, raspberryConfig, leavesConfig)
             filter: blur(${blur}px);
             transform: rotate(${rotate}deg);
             left: ${posX}px;
-            top:${Math.max(-200, Math.min(posY, sectionHeight - size))}px;
+            top:${posY}px;
         `;
 
         fragment.appendChild(img);
@@ -52,12 +52,25 @@ document.addEventListener("DOMContentLoaded", () =>
         minSize: 120, maxSize: 220, minBlur: 0, maxBlur: 2, minRotate: 0, maxRotate: 360,
         images: [
             [null, -5, 'left', 180], 
-            [null, 80, 'right', -50], 
+            [null, 80, 'right', -40], 
             [null, 680, 'right', -40]
         ]
     }, 
     { 
-        minSize: 200, maxSize: 220, minBlur: 0, maxBlur: 5, minRotate: 270, maxRotate: 280,
-        images: [[20, 1600]]
+        minSize: 200, maxSize: 220, minBlur: 0, maxBlur: 5, minRotate: 270, maxRotate: 30,
+        images: [[20, 780]]
     });
-})
+    createRandomImages('section1_catalog', {
+        minSize: 120, maxSize: 180, minBlur: 0, maxBlur: 2, minRotate: 0, maxRotate: 360,
+        images: [
+            [null, 160, 'left', 85]
+        ]
+    },
+    {
+        minSize: 160, maxSize: 180, minBlur: 0, maxBlur: 5, minRotate: 0, maxRotate: 360,
+        images: [
+            [null, 560, 'right', 40],
+            [null, 1100, 'left', 40]
+        ]
+    })
+});

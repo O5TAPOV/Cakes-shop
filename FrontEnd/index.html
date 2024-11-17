@@ -6,6 +6,7 @@
     <title>Cakes shop</title>
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/cardsInCatalog.css">
     <link rel="shortcut icon" href="img/common/favicon.png" type="image/png">
 </head>
 <body>
@@ -40,18 +41,24 @@
         </div>
     </header>
     <main>
-        <section id="section1_catalog" class="randomPosition_Image-section">
+        <section id="section1_catalog" class="randomPosition_Image-section light-bg-section">
+            <h3>Для будь-яких подій та дорогих Вам людей</h3>
+            <div id="catalog" class="cards-section"></div>
+        </section>
+        <section id="section2_phone" class="randomPosition_Image-section dark-bg-section">
+            <span class="CloudImg downCloud_img section2_up_img"></span>
+            <span class="CloudImg downCloud_img section2_down_img"></span>
+        </section>
+        <section id="section3_employee" class="randomPosition_Image-section light-bg-section">
             
         </section>
-        <section id="section2_phone" class="randomPosition_Image-section"></section>
-        <section id="section3_employee" class="randomPosition_Image-section"></section>
-        <section id="section4_reviews" class="randomPosition_Image-section"></section>
-        <section id="section5_gallery" class="randomPosition_Image-section"></section>
+        <section id="section4_reviews" class="randomPosition_Image-section dark-bg-section"></section>
+        <section id="section5_gallery" class="randomPosition_Image-section light-bg-section"></section>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footer" class="dark-bg-section"></footer>
 
     <script src="js/randomImagePosition.js"></script>
     <script src="js/scroll.js"></script>
-    <script src="js/button-waves.js"></script>
+    <script src="js/cardsInCatalog.js"></script>
 </body>
 </html>
