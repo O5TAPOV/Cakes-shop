@@ -85,5 +85,20 @@ document.addEventListener("DOMContentLoaded", () =>
             [null, 340, 'left', 40],
         ]
     }
+    );
+    createRandomImages('section3_employee', {
+        minSize: 300, maxSize: 300, minBlur: 0, maxBlur: 2, minRotate: 270, maxRotate: 270,
+        images: [
+            [null, 160, 'right', 400]
+        ]
+    },
+    {
+        minSize: 160, maxSize: 180, minBlur: 0, maxBlur: 3, minRotate: 95, maxRotate: 95,
+        images: [
+            [null, 190, 'right', 100],
+            [null, 220, 'right', 65],
+            [null, 260, 'right', 25],
+        ]
+    }
     )
 });

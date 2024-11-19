@@ -166,3 +166,80 @@ section h3 {
     background-image: url("../img/section2_phone/phone_down_cloud.svg");
     z-index: 1;
 }
+
+#section3_employee {
+    padding-top: 1.2em;
+}
+
+.employee-and-text {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.employee-text .overtitle {
+    padding: 12px 18px;
+}
+
+.employee-text h2 {
+    width: 90%;
+}
+
+.about-employee {
+    margin-right: -0.8em;
+    z-index: 1;
+}
+
+ul {width: 80%;}
+
+li {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    margin-left: -0.8em;
+    margin-bottom: 3.2em;
+    color: #5D6AFB;
+}
+
+.ul-text {
+    color:#2E363E;
+}
+
+.employee-name_bg { 
+    position: absolute; 
+}
+
+span.dark-bg {
+    background-color: #2E363E;
+    padding: 15px 24px;
+    transform: skew(-5deg);
+    border-radius: 6px;
+    z-index: 3;
+    bottom: 12em;
+    right: 29em;
+}
+
+span.dark-bg::after {
+    content: 'Юлія Кондратьова';
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.about-employee span.light-bg {
+    background-color: #F2F6FA;
+    padding: 15px 24px;
+    transform: skew(-5deg);
+    border-radius: 6px;
+    bottom: 8.6em;
+    right: 31em;
+}
+
+.about-employee span.light-bg::after {
+    content: 'Ваш кондитер';
+    font-size: 18px;
+    color: #2E363E;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
